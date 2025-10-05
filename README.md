@@ -1,132 +1,101 @@
 # AddressBookProject
 Agenda
-Sistema de Administracion de Citas
+Sistema de Administración de Citas
 
-Repositorio: https://github.com/albertorochel-svg/AddressBookProject.git
+Proyecto en Java SE – Universidad Tecmilenio
 
-Descripcion general
+Este proyecto implementa un sistema de administración de citas médicas desarrollado en Java SE 8+, siguiendo buenas prácticas de programación orientada a objetos, manejo de archivos CSV y estructura profesional de repositorio con GitHub.
 
-Este proyecto es una aplicacion en Java que permite administrar citas medicas de manera sencilla.
-El sistema permite registrar doctores con su especialidad, crear citas con fecha y hora, listar, eliminar y guardar toda la informacion en un archivo CSV.
-Fue desarrollado como parte del curso Computacion en Java en la Universidad Tecmilenio.
+Instalación y Configuración
 
-Instalacion y configuracion
-
-Requisitos previos
-
-Java SE 8 o superior
-
-NetBeans IDE 12 o superior
-
-Sistema operativo Windows, Linux o macOS
-
-Clonar o descargar el repositorio
+Clonar el repositorio desde GitHub:
 
 git clone https://github.com/albertorochel-svg/AddressBookProject.git
 
 
-Abrir en NetBeans
+Abrir el proyecto en NetBeans (o cualquier IDE compatible con Java SE 8+).
 
-Abre NetBeans
+Verificar la ruta del archivo CSV utilizada por el sistema:
 
-Selecciona File -> Open Project
-
-Busca la carpeta descargada AddressBookProject y abre el proyecto
-
-Configurar la ruta del archivo CSV
-El sistema utiliza archivos CSV para guardar los datos de doctores y citas.
-Asegurate de tener creada la siguiente ruta:
-
-C:\Users\PPC\Desktop\Tecmilenio\java\
+C:\Users\PPC\Desktop\Tecmilenio\java\citas.csv
 
 
-Los archivos generados seran:
+Compilar y ejecutar la clase principal:
 
-doctores.csv
+Clinica.ClinicaApp
 
-citas.csv
+Uso del Programa
 
-Ejecucion
+Al ejecutar el sistema, aparecerá un menú interactivo con opciones numeradas:
 
-Compila y ejecuta el proyecto desde la clase principal:
+===== Sistema de Administración de Citas =====
+Archivo CSV: C:\Users\PPC\Desktop\Tecmilenio\java\citas.csv
 
-ClinicaApp.java
-
-
-En consola aparecera el siguiente menu interactivo:
-
-===== Sistema de administracion de citas =====
 1. Agregar doctor
 2. Lista de doctores
 3. Crear cita
 4. Citas registradas
 5. Eliminar cita
-6. Guardar (CSV)
-7. Cargar (CSV)
+6. Guardar a CSV
+7. Cargar desde CSV
 8. Salir
-Selecciona una opcion (1-8):
+Selecciona una opción:
 
-Funcionalidades
-Opcion	Descripcion
-1	Agregar doctor: registra un nuevo doctor con su especialidad
-2	Lista de doctores: muestra los doctores registrados
-3	Crear cita: permite registrar una cita indicando paciente, doctor, fecha y hora
-4	Citas registradas: lista todas las citas guardadas
-5	Eliminar cita: elimina una cita usando su ID
-6	Guardar (CSV): guarda toda la informacion en archivos CSV
-7	Cargar (CSV): recarga la informacion desde los archivos CSV
-8	Salir: finaliza el programa
-Estructura del proyecto
+Funcionalidades:
+Opción	Comando	Descripción
+1	adddoctor	Da de alta un nuevo doctor con su especialidad.
+2	doctores	Muestra la lista completa de doctores registrados.
+3	create	Crea una nueva cita médica asignando doctor, paciente y hora.
+4	citas	Lista todas las citas registradas.
+5	delcita	Elimina una cita existente por su ID.
+6	save	Guarda todos los cambios en el archivo CSV.
+7	load	Carga la información desde el archivo CSV.
+8	exit	Finaliza la aplicación.
+Estructura del Proyecto
 AddressBookProject/
 │
 ├── src/
 │   └── Clinica/
-│       ├── ClinicaApp.java
-│       ├── Clinica.java
-│       ├── Doctor.java
-│       ├── Cita.java
-│       ├── Paciente.java
-│       └── Administrador.java
+│       ├── ClinicaApp.java        # Clase principal (main)
+│       ├── Doctor.java            # Clase para registro de doctores
+│       ├── Cita.java              # Clase que representa una cita médica
+│       ├── Administrador.java     # Clase que gestiona doctores y citas
 │
-├── C:\Users\PPC\Desktop\Tecmilenio\java\
-│       ├── doctores.csv
-│       └── citas.csv
+├── C:\Users\PPC\Desktop\Tecmilenio\java\citas.csv   # Archivo CSV con los datos
+│
+├── bin/        # Contiene el archivo JAR ejecutable
+├── lib/        # Dependencias del proyecto
+├── config/     # Archivos de configuración
+├── logs/       # Archivos de registro (vacío)
 │
 ├── .gitignore
 ├── README.md
 └── LICENSE (opcional)
 
-Creditos
+Créditos
 
 Autor: Alberto Rochel
-Curso: Computacion en Java
-Institucion: Universidad Tecmilenio
+Curso: Computación en Java®
+Institución: Universidad Tecmilenio
 Fecha: Octubre 2025
 
 Licencia
 
-Este proyecto se distribuye bajo la licencia MIT, permitiendo su uso con fines educativos, academicos y de aprendizaje, citando al autor original.
+Este proyecto se distribuye bajo la licencia MIT, permitiendo su uso educativo y de aprendizaje, citando al autor original.
 
-Control de versiones (Git)
+Control de Versiones
 
-Branch principal: master (version estable)
+Branch principal: master (versión estable)
 
-Branch de desarrollo: develop (version en desarrollo)
+Branch de desarrollo: develop (en progreso)
 
-Branchs de funcionalidad: feature/agregar-doctor, feature/crear-cita, etc.
+Cada funcionalidad (por ejemplo feature/crear_cita) tiene su propio branch que se integra en develop.
 
-Version estable: v1.0
+La versión final v1.0 está etiquetada en el branch master.
 
-Ultima actualizacion: Octubre 2025
+Requisitos Técnicos
 
-Carpetas complementarias
-Carpeta	Contenido
-/bin	Archivo JAR exportado del sistema
-/lib	Librerias adicionales (si aplica)
-/config	Archivos de configuracion
-/logs	Carpeta vacia para logs de ejecucion
-Resumen tecnico
+Java SE 8 o superior
 
-El programa usa clases Java para modelar doctores y citas
-
-Los datos se almacenan en archivos CSV mediante clases de lectura y escritura (BufferedReader y BufferedWriter)
+NetBeans IDE 12+ o IntelliJ IDEA
+Sistema operativo Windows, Linux o macOS
