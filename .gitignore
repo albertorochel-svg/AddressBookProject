@@ -1,32 +1,30 @@
-# Archivos compilados de Java
+# Compilados y empaquetados
 *.class
+*.jar
+*.war
+*.ear
 
-# Archivos temporales del sistema
-*.log
-*.tmp
-*.swp
-
-# Archivos de proyecto de NetBeans
-nbproject/private/
-build/
-dist/
-nbbuild/
-nbdist/
-nblibraries.properties
-
-# Archivos de configuracion del IDE
+# IDEs
 /.idea/
 /*.iml
+/.vscode/
+/nbproject/private/
+/dist/
+/out/
+/build/
+/target/
 
-# Archivos generados por el sistema
+# Directorios binarios y logs
+/bin/
+/logs/
+/*.log
+
+# Archivos temporales
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
 
-# Archivos de salida
-/bin/
-/lib/
-/config/
-/logs/
-
-# Archivos CSV de datos locales (no subir datos personales)
-*.csv
+# Config locales (no subir credenciales ni rutas privadas)
+config/*.local.*
