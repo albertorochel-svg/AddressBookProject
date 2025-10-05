@@ -3,8 +3,11 @@ Agenda
 Sistema de Administración de Citas
 
 Proyecto en Java SE – Universidad Tecmilenio
-
-Este proyecto implementa un sistema de administración de citas médicas desarrollado en Java SE 8+, siguiendo buenas prácticas de programación orientada a objetos, manejo de archivos CSV y estructura profesional de repositorio con GitHub.
+Aplicación de consola en Java para administrar doctores y citas médicas:
+- Alta de doctores con especialidad
+- Creación de citas por doctor, paciente, fecha y hora
+- Listado y eliminación de citas
+- Persistencia en **CSV** (doctores y citas) en una ruta local de Windows
 
 Instalación y Configuración
 
